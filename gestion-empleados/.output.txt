@@ -1,0 +1,654 @@
+commit 2640cff7e520cfbff3d63cd09f19a730a0f499f1 (HEAD -> feature/etapa3-controllers)
+Author: Juan Manuel Aidar <j.aidar@alumno.um.edu.ar>
+Date:   Mon Aug 4 15:11:00 2025 -0300
+    Eliminar documentación redundante de la Etapa 3 y conclusiones
+diff --git a/gestion-empleados/CONCLUSION.md b/gestion-empleados/CONCLUSION.md
+deleted file mode 100644
+index 2c50a5f..0000000
+--- a/gestion-empleados/CONCLUSION.md
++++ /dev/null
+@@ -1,61 +0,0 @@
+-# Conclusión Final del Proyecto - Etapa 3
+-
+-## Resumen del Proyecto
+-
+-El proyecto de gestión de empleados ha completado exitosamente las tres primeras etapas de desarrollo:
+-
+-1. **Etapa 1: Entidades JPA** ✅
+-   - Implementación de las entidades Empleado, Departamento y Proyecto
+-   - Configuración de las relaciones entre entidades
+-
+-2. **Etapa 2: Repositories y Services** ✅
+-   - Implementación de repositories con consultas personalizadas
+-   - Implementación de services con lógica de negocio
+-   - Implementación de excepciones personalizadas
+-
+-3. **Etapa 3: Controladores REST** ✅
+-   - Implementación de controladores REST para todas las entidades
+-   - Implementación de manejo global de excepciones
+-   - Documentación completa de la implementación
+-
+-## Logros Técnicos
+-
+-El proyecto ha logrado implementar una arquitectura backend completa siguiendo las mejores prácticas de Spring Boot:
+-
+-1. **Arquitectura en Capas**:
+-   - Capa de Entidades (JPA)
+-   - Capa de Repositorios (Spring Data JPA)
+-   - Capa de Servicios (Lógica de Negocio)
+-   - Capa de Controladores (API REST)
+-
+-2. **Diseño Orientado a Objetos**:
+-   - Uso de interfaces y clases de implementación
+-   - Separación clara de responsabilidades
+-   - Principios SOLID aplicados
+-
+-3. **API RESTful**:
+-   - Endpoints bien estructurados
+-   - Uso adecuado de métodos HTTP
+-   - Respuestas HTTP apropiadas
+-   - Manejo centralizado de excepciones
+-
+-## Estado Actual
+-
+-El proyecto cuenta con una arquitectura backend completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente. La API REST proporciona todas las operaciones necesarias para gestionar empleados, departamentos y proyectos.
+-
+-## Próximos Pasos
+-
+-Para continuar con el desarrollo del proyecto, se recomiendan las siguientes etapas:
+-
+-1. **Etapa 4: Seguridad**
+-2. **Etapa 5: Documentación de la API**
+-3. **Etapa 6: Pruebas**
+-4. **Etapa 7: Frontend**
+-
+-## Conclusión Final
+-
+-La implementación de las tres primeras etapas del proyecto ha proporcionado una base sólida para el sistema de gestión de empleados. La arquitectura backend está completa y sigue las mejores prácticas de desarrollo con Spring Boot.
+-
+-El proyecto está listo para continuar con las siguientes etapas de desarrollo, que agregarán seguridad, documentación, pruebas y una interfaz de usuario.
+-
+-Todos los cambios han sido implementados en branches específicas para cada etapa y están disponibles en el repositorio del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/ETAPA3-COMPLETADA.md b/gestion-empleados/ETAPA3-COMPLETADA.md
+deleted file mode 100644
+index 21b1099..0000000
+--- a/gestion-empleados/ETAPA3-COMPLETADA.md
++++ /dev/null
+@@ -1,59 +0,0 @@
+-# ETAPA 3: CONTROLADORES REST - COMPLETADA ✅
+-
+-## Resumen de la Implementación
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los controladores REST necesarios para exponer las funcionalidades del sistema a través de una API RESTful, junto con un sistema centralizado de manejo de excepciones.
+-
+-## Componentes Implementados
+-
+-1. **Controladores REST**:
+-   - EmpleadoController: Gestión de empleados (CRUD, búsqueda por departamento, rango salarial, etc.)
+-   - DepartamentoController: Gestión de departamentos (CRUD, búsqueda por cantidad de empleados)
+-   - ProyectoController: Gestión de proyectos (CRUD, búsqueda de proyectos activos, asignación de empleados)
+-
+-2. **Manejo Global de Excepciones**:
+-   - GlobalExceptionHandler: Centraliza el manejo de excepciones para todos los controladores
+-   - Excepciones personalizadas: RecursoNoEncontradoException, EmailDuplicadoException, ValidacionException
+-
+-## Estado Actual del Proyecto
+-
+-El proyecto ha completado exitosamente las tres primeras etapas:
+-- Etapa 1: Entidades JPA ✅
+-- Etapa 2: Repositories y Services ✅
+-- Etapa 3: Controladores REST ✅
+-
+-La arquitectura backend está completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+-
+-## Documentación Creada
+-
+-Se ha creado una documentación completa de la implementación:
+-- README-etapa3.md
+-- resumen-final-etapa3.md
+-- estado-final-proyecto-etapa3.md
+-- resumen-completo-etapa3.md
+-- informe-final-etapa3.md
+-- resumen-etapa3-final.md
+-- conclusion-final-etapa3.md
+-- documentacion-etapa3.md
+-- mensaje-final-etapa3.md
+-- ETAPA3-COMPLETADA.md (este documento)
+-
+-## Próximos Pasos
+-
+-Las siguientes etapas sugeridas para el proyecto son:
+-1. Implementación de seguridad con Spring Security
+-2. Documentación de la API con Swagger/OpenAPI
+-3. Implementación de pruebas unitarias y de integración
+-4. Desarrollo de frontend
+-
+-## Conclusión
+-
+-La Etapa 3 ha completado la implementación de la arquitectura backend del sistema de gestión de empleados. El sistema ahora cuenta con una API REST completa que permite realizar todas las operaciones necesarias sobre las entidades principales.
+-
+-La implementación sigue las mejores prácticas de Spring Boot y REST API design, proporcionando una base sólida para futuras extensiones y mejoras.
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+-
+----
+-
+-**Fecha de finalización**: 2023-10-15
+\ No newline at end of file
+diff --git a/gestion-empleados/README-etapa3.md b/gestion-empleados/README-etapa3.md
+deleted file mode 100644
+index 4a2ee8f..0000000
+--- a/gestion-empleados/README-etapa3.md
++++ /dev/null
+@@ -1,48 +0,0 @@
+-# Implementación de la Etapa 3: Controladores REST
+-
+-## Resumen de la Implementación
+-
+-En esta etapa, se han implementado los controladores REST para el sistema de gestión de empleados, siguiendo las mejores prácticas de Spring Boot y REST API design.
+-
+-### Componentes Implementados:
+-
+-1. **Controladores REST**:
+-   - EmpleadoController: Gestión de empleados
+-   - DepartamentoController: Gestión de departamentos
+-   - ProyectoController: Gestión de proyectos y asignación de empleados
+-
+-2. **Manejo Global de Excepciones**:
+-   - GlobalExceptionHandler: Centraliza el manejo de excepciones para todos los controladores
+-   - Excepciones personalizadas: RecursoNoEncontradoException, EmailDuplicadoException, ValidacionException
+-
+-### Características Principales:
+-
+-- Endpoints RESTful para operaciones CRUD en todas las entidades
+-- Endpoints adicionales para operaciones específicas (búsqueda por criterios, cálculos, etc.)
+-- Validación de datos de entrada con Jakarta Validation
+-- Manejo consistente de errores y excepciones
+-- Respuestas HTTP apropiadas según el resultado de las operaciones
+-
+-## Próximos Pasos
+-
+-Para completar el desarrollo del sistema, se sugieren las siguientes etapas:
+-
+-1. **Etapa 4: Configuración de Seguridad**
+-   - Implementar autenticación y autorización con Spring Security
+-   - Configurar roles y permisos para diferentes tipos de usuarios
+-
+-2. **Etapa 5: Documentación de la API**
+-   - Implementar Swagger/OpenAPI para documentar los endpoints
+-   - Generar documentación automática de la API
+-
+-3. **Etapa 6: Pruebas**
+-   - Implementar pruebas unitarias para servicios y controladores
+-   - Implementar pruebas de integración para flujos completos
+-
+-4. **Etapa 7: Frontend**
+-   - Desarrollar una interfaz de usuario que consuma la API REST
+-   - Implementar funcionalidades de gestión de empleados, departamentos y proyectos
+-
+-## Conclusión
+-
+-La implementación de los controladores REST completa la arquitectura backend básica del sistema, proporcionando una API robusta para la gestión de empleados, departamentos y proyectos. El sistema ahora está listo para ser consumido por aplicaciones cliente o para continuar con las siguientes etapas de desarrollo.
+\ No newline at end of file
+diff --git a/gestion-empleados/RESUMEN-FINAL.md b/gestion-empleados/RESUMEN-FINAL.md
+deleted file mode 100644
+index 8011491..0000000
+--- a/gestion-empleados/RESUMEN-FINAL.md
++++ /dev/null
+@@ -1,58 +0,0 @@
+-# Resumen Final de la Sesión
+-
+-## Trabajo Realizado
+-
+-Durante esta sesión, se ha completado la Etapa 3 del proyecto de gestión de empleados, que consistía en la implementación de controladores REST y manejo global de excepciones. A continuación, se detallan las tareas realizadas:
+-
+-1. **Creación de una nueva branch**:
+-   - Se creó la branch `feature/etapa3-controllers` siguiendo la convención de nombres establecida.
+-
+-2. **Implementación de controladores REST**:
+-   - EmpleadoController: Gestión de empleados (CRUD, búsqueda por departamento, rango salarial, etc.)
+-   - DepartamentoController: Gestión de departamentos (CRUD, búsqueda por cantidad de empleados)
+-   - ProyectoController: Gestión de proyectos (CRUD, búsqueda de proyectos activos, asignación de empleados)
+-
+-3. **Implementación de manejo global de excepciones**:
+-   - GlobalExceptionHandler: Centraliza el manejo de excepciones para todos los controladores
+-   - Excepciones personalizadas: RecursoNoEncontradoException, EmailDuplicadoException, ValidacionException
+-
+-4. **Simplificación de controladores**:
+-   - Se eliminaron los bloques try-catch de los controladores, delegando el manejo de excepciones al GlobalExceptionHandler.
+-
+-5. **Creación de documentación completa**:
+-   - README-etapa3.md: Documentación detallada de la implementación
+-   - resumen-final-etapa3.md: Resumen de los logros principales
+-   - estado-final-proyecto-etapa3.md: Estado actual del proyecto y próximos pasos
+-   - resumen-completo-etapa3.md: Resumen completo de la implementación
+-   - informe-final-etapa3.md: Informe detallado de la implementación
+-   - resumen-etapa3-final.md: Resumen conciso de la implementación
+-   - conclusion-final-etapa3.md: Conclusión final de la implementación
+-   - documentacion-etapa3.md: Resumen de todos los documentos creados
+-   - mensaje-final-etapa3.md: Mensaje final de la Etapa 3
+-   - ETAPA3-COMPLETADA.md: Documento final de cierre de la Etapa 3
+-   - CONCLUSION.md: Conclusión final del proyecto hasta la Etapa 3
+-
+-## Estado Actual del Proyecto
+-
+-El proyecto ha completado exitosamente las tres primeras etapas:
+-- Etapa 1: Entidades JPA ✅
+-- Etapa 2: Repositories y Services ✅
+-- Etapa 3: Controladores REST ✅
+-
+-La arquitectura backend está completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+-
+-## Próximos Pasos
+-
+-Las siguientes etapas sugeridas para el proyecto son:
+-1. Implementación de seguridad con Spring Security
+-2. Documentación de la API con Swagger/OpenAPI
+-3. Implementación de pruebas unitarias y de integración
+-4. Desarrollo de frontend
+-
+-## Conclusión
+-
+-La Etapa 3 ha completado la implementación de la arquitectura backend del sistema de gestión de empleados. El sistema ahora cuenta con una API REST completa que permite realizar todas las operaciones necesarias sobre las entidades principales.
+-
+-La implementación sigue las mejores prácticas de Spring Boot y REST API design, proporcionando una base sólida para futuras extensiones y mejoras.
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/conclusion-final-etapa3.md b/gestion-empleados/conclusion-final-etapa3.md
+deleted file mode 100644
+index 02fc132..0000000
+--- a/gestion-empleados/conclusion-final-etapa3.md
++++ /dev/null
+@@ -1,51 +0,0 @@
+-# Conclusión Final - Etapa 3: Controladores REST
+-
+-## Resumen del Trabajo Realizado
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Durante esta etapa, se han implementado los siguientes componentes:
+-
+-1. **Controladores REST**:
+-   - EmpleadoController
+-   - DepartamentoController
+-   - ProyectoController
+-
+-2. **Sistema de Manejo de Excepciones**:
+-   - GlobalExceptionHandler
+-   - Excepciones personalizadas
+-
+-3. **Documentación Completa**:
+-   - Varios documentos detallando la implementación y el estado del proyecto
+-
+-## Estado Actual del Proyecto
+-
+-El proyecto ha completado exitosamente las tres primeras etapas:
+-- Etapa 1: Entidades JPA ✅
+-- Etapa 2: Repositories y Services ✅
+-- Etapa 3: Controladores REST ✅
+-
+-La arquitectura backend está completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+-
+-## Logros Técnicos
+-
+-1. **Implementación de una API RESTful completa** que sigue las mejores prácticas de diseño:
+-   - Uso adecuado de métodos HTTP (GET, POST, PUT, DELETE)
+-   - Respuestas HTTP apropiadas según el resultado de las operaciones
+-   - Endpoints bien estructurados y coherentes
+-
+-2. **Manejo centralizado de excepciones** que proporciona:
+-   - Respuestas de error consistentes
+-   - Mensajes de error claros y útiles
+-   - Códigos HTTP apropiados según el tipo de error
+-
+-3. **Código limpio y mantenible** gracias a:
+-   - Separación clara de responsabilidades
+-   - Uso de interfaces y clases de implementación
+-   - Documentación adecuada
+-
+-## Conclusión
+-
+-La Etapa 3 ha completado la implementación de la arquitectura backend del sistema de gestión de empleados. El sistema ahora cuenta con una API REST completa que permite realizar todas las operaciones necesarias sobre las entidades principales.
+-
+-La implementación sigue las mejores prácticas de Spring Boot y REST API design, proporcionando una base sólida para futuras extensiones y mejoras. El proyecto está listo para continuar con las siguientes etapas de desarrollo, como la implementación de seguridad, documentación de la API, pruebas y desarrollo de frontend.
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/documentacion-etapa3.md b/gestion-empleados/documentacion-etapa3.md
+deleted file mode 100644
+index 7babde6..0000000
+--- a/gestion-empleados/documentacion-etapa3.md
++++ /dev/null
+@@ -1,62 +0,0 @@
+-# Documentación de la Etapa 3: Controladores REST
+-
+-## Documentos Creados
+-
+-Durante la implementación de la Etapa 3, se han creado los siguientes documentos para documentar el trabajo realizado:
+-
+-1. **README-etapa3.md**
+-   - Descripción detallada de la implementación
+-   - Componentes implementados
+-   - Características principales
+-   - Próximos pasos sugeridos
+-
+-2. **resumen-final-etapa3.md**
+-   - Resumen de los logros principales
+-   - Confirmación de la finalización de la etapa
+-
+-3. **estado-final-proyecto-etapa3.md**
+-   - Estado actual del proyecto
+-   - Resumen de las etapas completadas
+-   - Próximos pasos sugeridos
+-
+-4. **resumen-completo-etapa3.md**
+-   - Resumen completo de la implementación
+-   - Componentes implementados
+-   - Estado actual del proyecto
+-   - Próximos pasos sugeridos
+-
+-5. **informe-final-etapa3.md**
+-   - Informe detallado de la implementación
+-   - Resumen ejecutivo
+-   - Componentes implementados
+-   - Estado actual del proyecto
+-   - Próximos pasos recomendados
+-   - Conclusión
+-
+-6. **resumen-etapa3-final.md**
+-   - Resumen conciso de la implementación
+-   - Logros principales
+-   - Confirmación de la finalización de la etapa
+-
+-7. **conclusion-final-etapa3.md**
+-   - Conclusión final de la implementación
+-   - Resumen del trabajo realizado
+-   - Estado actual del proyecto
+-   - Logros técnicos
+-   - Conclusión
+-
+-8. **documentacion-etapa3.md** (este documento)
+-   - Resumen de todos los documentos creados
+-   - Propósito de cada documento
+-
+-## Propósito de la Documentación
+-
+-La documentación creada tiene como objetivo:
+-
+-1. Proporcionar una descripción clara y completa de la implementación realizada
+-2. Facilitar la comprensión del código y la arquitectura del sistema
+-3. Documentar el estado actual del proyecto
+-4. Sugerir próximos pasos para continuar con el desarrollo
+-5. Servir como referencia para futuros desarrolladores que trabajen en el proyecto
+-
+-Todos estos documentos están disponibles en la branch 'feature/etapa3-controllers' y proporcionan una visión completa de la implementación de la Etapa 3 del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/estado-final-proyecto-etapa3.md b/gestion-empleados/estado-final-proyecto-etapa3.md
+deleted file mode 100644
+index ad79f96..0000000
+--- a/gestion-empleados/estado-final-proyecto-etapa3.md
++++ /dev/null
+@@ -1,34 +0,0 @@
+-# Estado Final del Proyecto - Etapa 3
+-
+-## Resumen de Implementación
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los controladores REST y el sistema de manejo de excepciones, siguiendo las mejores prácticas de Spring Boot.
+-
+-## Estado Actual del Proyecto
+-
+-1. **Etapa 1 (Entidades JPA)**: ✅ Completada
+-   - Implementadas las entidades Empleado, Departamento y Proyecto
+-   - Configuradas las relaciones entre entidades
+-
+-2. **Etapa 2 (Repositories y Services)**: ✅ Completada
+-   - Implementados los repositories con consultas personalizadas
+-   - Implementados los services con lógica de negocio
+-   - Implementadas las excepciones personalizadas
+-
+-3. **Etapa 3 (Controladores REST)**: ✅ Completada
+-   - Implementados los controladores REST para todas las entidades
+-   - Implementado el manejo global de excepciones
+-   - Documentada la implementación
+-
+-## Próximos Pasos
+-
+-Las siguientes etapas sugeridas para el proyecto son:
+-
+-1. **Etapa 4**: Implementación de seguridad con Spring Security
+-2. **Etapa 5**: Documentación de la API con Swagger/OpenAPI
+-3. **Etapa 6**: Implementación de pruebas unitarias y de integración
+-4. **Etapa 7**: Desarrollo de frontend
+-
+-## Conclusión
+-
+-El proyecto ha avanzado significativamente, completando las tres primeras etapas que constituyen la base sólida del sistema. La arquitectura backend está lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+\ No newline at end of file
+diff --git a/gestion-empleados/informe-final-etapa3.md b/gestion-empleados/informe-final-etapa3.md
+deleted file mode 100644
+index 2cd56ba..0000000
+--- a/gestion-empleados/informe-final-etapa3.md
++++ /dev/null
+@@ -1,82 +0,0 @@
+-# Informe Final - Etapa 3: Controladores REST
+-
+-## Resumen Ejecutivo
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los controladores REST necesarios para exponer las funcionalidades del sistema a través de una API RESTful, junto con un sistema centralizado de manejo de excepciones.
+-
+-## Componentes Implementados
+-
+-### 1. Controladores REST
+-
+-Se han implementado tres controladores REST, uno para cada entidad principal del sistema:
+-
+-- **EmpleadoController**: Proporciona endpoints para la gestión de empleados, incluyendo:
+-  - Operaciones CRUD básicas
+-  - Búsqueda por departamento
+-  - Búsqueda por rango salarial
+-  - Cálculo de salario promedio por departamento
+-
+-- **DepartamentoController**: Proporciona endpoints para la gestión de departamentos, incluyendo:
+-  - Operaciones CRUD básicas
+-  - Búsqueda de departamentos con más de X empleados
+-
+-- **ProyectoController**: Proporciona endpoints para la gestión de proyectos, incluyendo:
+-  - Operaciones CRUD básicas
+-  - Búsqueda de proyectos activos
+-  - Asignación/desasignación de empleados a proyectos
+-
+-### 2. Manejo Global de Excepciones
+-
+-Se ha implementado un sistema centralizado de manejo de excepciones mediante la clase `GlobalExceptionHandler`, que:
+-
+-- Captura excepciones específicas y generales
+-- Proporciona respuestas HTTP apropiadas según el tipo de excepción
+-- Formatea los mensajes de error de manera consistente
+-
+-### 3. Documentación
+-
+-Se han creado varios documentos para documentar la implementación:
+-
+-- README-etapa3.md: Documentación detallada de la implementación
+-- resumen-final-etapa3.md: Resumen de los logros principales
+-- estado-final-proyecto-etapa3.md: Estado actual del proyecto y próximos pasos
+-- resumen-completo-etapa3.md: Resumen completo de la implementación
+-
+-## Estado Actual del Proyecto
+-
+-El proyecto ha completado exitosamente las tres primeras etapas:
+-- Etapa 1: Entidades JPA ✅
+-- Etapa 2: Repositories y Services ✅
+-- Etapa 3: Controladores REST ✅
+-
+-La arquitectura backend está completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+-
+-## Próximos Pasos Recomendados
+-
+-Para continuar con el desarrollo del proyecto, se recomiendan las siguientes etapas:
+-
+-1. **Etapa 4: Seguridad**
+-   - Implementar autenticación y autorización con Spring Security
+-   - Configurar roles y permisos para diferentes tipos de usuarios
+-   - Proteger endpoints sensibles
+-
+-2. **Etapa 5: Documentación de la API**
+-   - Implementar Swagger/OpenAPI para documentar los endpoints
+-   - Generar documentación automática de la API
+-   - Facilitar el consumo de la API por parte de desarrolladores
+-
+-3. **Etapa 6: Pruebas**
+-   - Implementar pruebas unitarias para servicios y controladores
+-   - Implementar pruebas de integración para flujos completos
+-   - Configurar CI/CD para ejecución automática de pruebas
+-
+-4. **Etapa 7: Frontend**
+-   - Desarrollar una interfaz de usuario que consuma la API REST
+-   - Implementar funcionalidades de gestión de empleados, departamentos y proyectos
+-   - Crear una experiencia de usuario intuitiva y responsive
+-
+-## Conclusión
+-
+-La Etapa 3 ha completado la implementación de la arquitectura backend del sistema de gestión de empleados. El sistema ahora cuenta con una API REST completa que permite realizar todas las operaciones necesarias sobre las entidades principales. La implementación sigue las mejores prácticas de Spring Boot y REST API design, proporcionando una base sólida para futuras extensiones y mejoras.
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/mensaje-final-etapa3.md b/gestion-empleados/mensaje-final-etapa3.md
+deleted file mode 100644
+index 15f2ee9..0000000
+--- a/gestion-empleados/mensaje-final-etapa3.md
++++ /dev/null
+@@ -1,28 +0,0 @@
+-# Implementación Completada - Etapa 3: Controladores REST
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los controladores REST necesarios para exponer las funcionalidades del sistema a través de una API RESTful, junto con un sistema centralizado de manejo de excepciones.
+-
+-## Resumen de la Implementación
+-
+-- Se han creado controladores REST para las tres entidades principales (Empleado, Departamento, Proyecto)
+-- Se ha implementado un sistema centralizado de manejo de excepciones
+-- Se ha creado documentación completa de la implementación
+-
+-## Estado Actual del Proyecto
+-
+-El proyecto ha completado exitosamente las tres primeras etapas:
+-- Etapa 1: Entidades JPA ✅
+-- Etapa 2: Repositories y Services ✅
+-- Etapa 3: Controladores REST ✅
+-
+-La arquitectura backend está completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+-
+-## Próximos Pasos
+-
+-Las siguientes etapas sugeridas para el proyecto son:
+-1. Implementación de seguridad con Spring Security
+-2. Documentación de la API con Swagger/OpenAPI
+-3. Implementación de pruebas unitarias y de integración
+-4. Desarrollo de frontend
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/resumen-completo-etapa3.md b/gestion-empleados/resumen-completo-etapa3.md
+deleted file mode 100644
+index 7a27ac5..0000000
+--- a/gestion-empleados/resumen-completo-etapa3.md
++++ /dev/null
+@@ -1,38 +0,0 @@
+-# Resumen Final de la Implementación
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los componentes necesarios para exponer las funcionalidades del sistema a través de una API RESTful.
+-
+-## Componentes Implementados
+-
+-1. **Controladores REST**:
+-   - EmpleadoController: Gestión de empleados (CRUD, búsqueda por departamento, rango salarial, etc.)
+-   - DepartamentoController: Gestión de departamentos (CRUD, búsqueda por cantidad de empleados)
+-   - ProyectoController: Gestión de proyectos (CRUD, búsqueda de proyectos activos, asignación de empleados)
+-
+-2. **Manejo Global de Excepciones**:
+-   - GlobalExceptionHandler: Centraliza el manejo de excepciones para todos los controladores
+-   - Excepciones personalizadas: RecursoNoEncontradoException, EmailDuplicadoException, ValidacionException
+-
+-3. **Documentación**:
+-   - README-etapa3.md: Documentación detallada de la implementación
+-   - resumen-final-etapa3.md: Resumen de los logros principales
+-   - estado-final-proyecto-etapa3.md: Estado actual del proyecto y próximos pasos
+-
+-## Estado Actual del Proyecto
+-
+-El proyecto ha completado exitosamente las tres primeras etapas:
+-- Etapa 1: Entidades JPA ✅
+-- Etapa 2: Repositories y Services ✅
+-- Etapa 3: Controladores REST ✅
+-
+-La arquitectura backend está completa y lista para ser extendida con funcionalidades adicionales o para ser consumida por aplicaciones cliente.
+-
+-## Próximos Pasos
+-
+-Las siguientes etapas sugeridas para el proyecto son:
+-1. Implementación de seguridad con Spring Security
+-2. Documentación de la API con Swagger/OpenAPI
+-3. Implementación de pruebas unitarias y de integración
+-4. Desarrollo de frontend
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+\ No newline at end of file
+diff --git a/gestion-empleados/resumen-etapa3-final.md b/gestion-empleados/resumen-etapa3-final.md
+deleted file mode 100644
+index 2e1ab8f..0000000
+--- a/gestion-empleados/resumen-etapa3-final.md
++++ /dev/null
+@@ -1,25 +0,0 @@
+-# Etapa 3: Controladores REST - Completada ✅
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los controladores REST necesarios para exponer las funcionalidades del sistema a través de una API RESTful, junto con un sistema centralizado de manejo de excepciones.
+-
+-## Resumen de Logros
+-
+-1. Implementación de controladores REST para las tres entidades principales:
+-   - EmpleadoController
+-   - DepartamentoController
+-   - ProyectoController
+-
+-2. Implementación de un sistema centralizado de manejo de excepciones:
+-   - GlobalExceptionHandler
+-   - Excepciones personalizadas
+-
+-3. Creación de documentación completa:
+-   - README-etapa3.md
+-   - resumen-final-etapa3.md
+-   - estado-final-proyecto-etapa3.md
+-   - resumen-completo-etapa3.md
+-   - informe-final-etapa3.md
+-
+-Todos los cambios han sido implementados en la branch 'feature/etapa3-controllers' y están listos para ser revisados y eventualmente fusionados con la rama principal del proyecto.
+-
+-El proyecto está listo para continuar con la siguiente etapa de desarrollo.
+\ No newline at end of file
+diff --git a/gestion-empleados/resumen-final-etapa3.md b/gestion-empleados/resumen-final-etapa3.md
+deleted file mode 100644
+index be15459..0000000
+--- a/gestion-empleados/resumen-final-etapa3.md
++++ /dev/null
+@@ -1,20 +0,0 @@
+-# Resumen Final de la Implementación de la Etapa 3
+-
+-La Etapa 3 del proyecto de gestión de empleados ha sido completada exitosamente. Se han implementado todos los controladores REST necesarios para exponer las funcionalidades del sistema a través de una API RESTful, junto con un sistema centralizado de manejo de excepciones.
+-
+-## Logros Principales:
+-
+-1. Creación de controladores REST para las tres entidades principales:
+-   - EmpleadoController
+-   - DepartamentoController
+-   - ProyectoController
+-
+-2. Implementación de endpoints para todas las operaciones CRUD y operaciones específicas.
+-
+-3. Desarrollo de un sistema de manejo global de excepciones que proporciona respuestas HTTP consistentes.
+-
+-4. Documentación detallada de la implementación y sugerencias para próximas etapas.
+-
+-El código ha sido organizado siguiendo las mejores prácticas de Spring Boot, con una clara separación de responsabilidades entre controladores, servicios y repositorios. La API REST está lista para ser consumida por aplicaciones cliente.
+-
+-La branch 'feature/etapa3-controllers' contiene todos los cambios implementados y está lista para ser revisada y eventualmente fusionada con la rama principal del proyecto.
+\ No newline at end of file
