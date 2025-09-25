@@ -52,12 +52,33 @@ La aplicación utiliza diferentes perfiles:
 - **default**: Utiliza H2 (base de datos en memoria) para desarrollo
 - **docker**: Utiliza PostgreSQL para ejecución en contenedores
 
+## Documentación de la API
+
+La API está documentada utilizando OpenAPI 3.0 (Swagger). Puedes acceder a la documentación interactiva de la API a través de la interfaz Swagger UI.
+
+### Acceso a Swagger UI
+
+Una vez que la aplicación esté en ejecución, puedes acceder a la documentación de la API en:
+
+- **Entorno local**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+- **Entorno Docker**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+La interfaz Swagger UI proporciona:
+- Documentación detallada de todos los endpoints
+- Posibilidad de probar los endpoints directamente desde el navegador
+- Esquemas de los modelos de datos
+- Descripción de parámetros y respuestas
+
 ## API REST
 
 ### Empleados
 
 - `GET /api/empleados`: Obtener todos los empleados
 - `GET /api/empleados/{id}`: Obtener un empleado por ID
+- `GET /api/empleados/email/{email}`: Obtener un empleado por email
+- `GET /api/empleados/departamento/{nombreDepartamento}`: Obtener empleados por departamento
+- `GET /api/empleados/salario?min={min}&max={max}`: Obtener empleados por rango de salario
+- `GET /api/empleados/departamento/{id}/salario-promedio`: Obtener salario promedio por departamento
 - `POST /api/empleados`: Crear un nuevo empleado
 - `PUT /api/empleados/{id}`: Actualizar un empleado existente
 - `DELETE /api/empleados/{id}`: Eliminar un empleado
@@ -66,6 +87,8 @@ La aplicación utiliza diferentes perfiles:
 
 - `GET /api/departamentos`: Obtener todos los departamentos
 - `GET /api/departamentos/{id}`: Obtener un departamento por ID
+- `GET /api/departamentos/nombre/{nombre}`: Obtener un departamento por nombre
+- `GET /api/departamentos/con-empleados-mas-que/{cantidad}`: Obtener departamentos con más de cierta cantidad de empleados
 - `POST /api/departamentos`: Crear un nuevo departamento
 - `PUT /api/departamentos/{id}`: Actualizar un departamento existente
 - `DELETE /api/departamentos/{id}`: Eliminar un departamento
@@ -74,6 +97,8 @@ La aplicación utiliza diferentes perfiles:
 
 - `GET /api/proyectos`: Obtener todos los proyectos
 - `GET /api/proyectos/{id}`: Obtener un proyecto por ID
+- `GET /api/proyectos/nombre/{nombre}`: Obtener un proyecto por nombre
+- `GET /api/proyectos/activos`: Obtener proyectos activos
 - `POST /api/proyectos`: Crear un nuevo proyecto
 - `PUT /api/proyectos/{id}`: Actualizar un proyecto existente
 - `DELETE /api/proyectos/{id}`: Eliminar un proyecto
